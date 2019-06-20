@@ -54,6 +54,9 @@ class VOCSegmentation(Dataset):
                 self.im_ids.append(line)
                 self.images.append(_image)
                 self.categories.append(_cat)
+                
+            self.im_ids = self.im_ids[:400]
+            self.categories = self.categories[:400]
             self.images = self.images[:400]
 
         assert (len(self.images) == len(self.categories))
