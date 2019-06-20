@@ -9,7 +9,7 @@ class Architect () :
         self.network_weight_decay = args.weight_decay
         self.model = model
         self.optimizer = torch.optim.Adam(self.model.arch_parameters(),
-            lr=args.arch_lr, betas=(0.5, 0.999), weight_decay=args.arch_weight_decay)
+            weight_decay=args.arch_weight_decay , betas=(0.5, 0.999) , lr=0.007)#args.arch_lr )
 
     def step (self, input_valid, target_valid) :
         self.optimizer.zero_grad ()
