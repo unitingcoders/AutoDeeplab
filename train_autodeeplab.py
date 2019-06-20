@@ -5,8 +5,8 @@ from tqdm import tqdm
 
 from mypath import Path
 from dataloaders import make_data_loader
-from modeling.sync_batchnorm.replicate import patch_replication_callback
-from modeling.deeplab import *
+# from modeling.sync_batchnorm.replicate import patch_replication_callback
+# from modeling.deeplab import *
 from utils.loss import SegmentationLosses
 from utils.calculate_weights import calculate_weigths_labels
 from utils.lr_scheduler import LR_Scheduler
