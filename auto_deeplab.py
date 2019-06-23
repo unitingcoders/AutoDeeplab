@@ -163,6 +163,11 @@ class AutoDeeplab (nn.Module) :
     def forward (self, x) :
         # self._init_level_arr (x)
         temp = self.stem0 (x)
+        self.level_2 = []
+        self.level_4 = []
+        self.level_8 = []
+        self.level_16 = []
+        self.level_32 = []
         self.level_2.append (self.stem1 (temp))
         self.level_4.append (self.stem2 (self.level_2[-1]))
         weight_cells = F.softmax(self.alphas_cell, dim=-1)
